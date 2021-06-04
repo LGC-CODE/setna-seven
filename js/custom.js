@@ -46,6 +46,24 @@
                 });
             });
         });
+        
+        $(function () {
+            const tooltipOne = $('[data-toggle="popover"]')
+            tooltipOne.tooltip();
+            tooltipOne.on('hide.bs.tooltip', function ($e) {
+                $e.preventDefault();
+                $('.tooltip').removeClass('show');
+                $('.tooltip').addClass('hide');
+                console.log('logging');
+            })
+            tooltipOne.on('show.bs.tooltip', function ($e) {
+                if($('.tooltip').length) $e.preventDefault();
+                $('.tooltip').removeClass('hide');
+                $('.tooltip').addClass('show');
+                console.log('logging');
+            })
+        })
+        
         if ($('.facts-list').length) {
             $('.facts-list').owlCarousel({
                 loop: true,
