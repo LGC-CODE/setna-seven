@@ -17,6 +17,7 @@ CSS SITEMAP >>>>
   08. CONTACT BLOCK CSS
   09. TESTIMONOALS BLOCK CSS
   10. SKILLS BLOCK CSS
+  11. RESPONSIVE CSS
 
 
 ==================================================*/
@@ -133,17 +134,25 @@ video {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
 }
+
+#myVideo {
+    background: url(../images/Snapshot_20210604_4.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
 #video:after {
   content: '';
   opacity: 0.75;
-  background: #4096ee; /* Old browsers */
+  background: #ff1111; /* Old browsers */
   background: -moz-linear-gradient(top, #ff1111 0%, #000000 100%);
   background: -webkit-linear-gradient(top, #ff1111 0%,#000000 100%);
   background: linear-gradient(to bottom right, #ff0000 0%,#000000 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1111', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
   position:fixed;
   left:0;
   top:0;
@@ -223,10 +232,10 @@ video {
   flex: 1 0 auto;
 }
 .preloader {
-  background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #4096ee 0%,#39ced6 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top, #ff1111 0%, #000000 100%);
+  background: -webkit-linear-gradient(top, #ff1111 0%,#000000 100%);
+  background: linear-gradient(to bottom right, #ff0000 0%,#000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1111', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
   height: 100%;
   left: 0;
   position: fixed;
@@ -413,6 +422,7 @@ a#logo {
   width:100%;
   margin:0 auto 30px;
   color: #fff;
+  font-weight: 600;
 }
 .welcome-title {
   font-weight: 700;
@@ -853,4 +863,10 @@ textarea.form-control {
   height: 6px;
   background-color: #fff;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 425px) { /* Activates on phones with screens smaller than 425px. Descending pixels. */
+  #myVideo {
+      background-size: cover;
+  }
 }
