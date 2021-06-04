@@ -1,1 +1,1 @@
-web: mv index.html index.php && vendor/bin/heroku-php-apache2
+web: mv index.html index.php && vendor/bin/heroku-php-apache2 index.php
