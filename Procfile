@@ -1,1 +1,1 @@
-web: sh -c 'mv index.html index.php && vendor/bin/heroku-php-apache2 index.php'
+web: sh -c 'mv ./index.html ./index.php && vendor/bin/heroku-php-apache2 ./index.php'
